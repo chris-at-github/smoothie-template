@@ -40,7 +40,7 @@ $doc->addStyleSheet(TplSmoothieLessHelper::compile('templates/'.$this->template.
 
 	<header id="page-header">
 		<div class="row">
-			<div id="logo" class="col-md-3"><a href="<?php echo $this->baseurl; ?>">Smoothie</a></div>
+			<div id="logo" class="col-md-3"><a href="<?php echo $this->baseurl; ?>"><img src="<?php echo $this->baseurl . '/templates/' . $this->template . '/images/logo.png' ?>" alt="" /></a></div>
 			<div id="search" class="col-md-9"><jdoc:include type="modules" name="search" style="container" /></div>
 		</div>
 
