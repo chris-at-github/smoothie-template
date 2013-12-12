@@ -7,12 +7,8 @@
 @import "bootstrap/print.less";
 
 // Core CSS
-//@import "bootstrap/type.less";
-//@import "bootstrap/code.less";
 @import "bootstrap/grid.less";
-//@import "bootstrap/tables.less";
-//@import "bootstrap/forms.less";
-//@import "bootstrap/buttons.less";
+@import "form.less";
 
 // Smoothie
 // ---------------------------------------------------------------------------------------------------------------------
@@ -37,10 +33,31 @@ input, button, select, textarea {
 	font-family: inherit;
 	font-size: inherit;
 	line-height: inherit;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+}
+
+input[type="text"], input[type="password"], input[type="submit"], textarea, select, button {
+	-webkit-appearance: none;
 }
 
 h1, .h1 {
-	color: blue;
+	font-size: @font-size-h1;
+	font-weight: @headings-font-weight;
+	font-style: italic;
+	letter-spacing: 1px;
+}
+
+h2, .h2 {
+	margin: 25px 0 10px 0;
+	font-weight: normal;
+	font-size: @font-size-h2;;
+	letter-spacing: 1px;
+}
+
+* h2:first-child, * .h2:first-child {
+	margin: 0 0 10px 0;
 }
 
 a {
@@ -81,6 +98,22 @@ nav {
 		margin: 0;
 		padding: 0;
 	}
+
+	a:hover, a:focus, a:active {
+		text-decoration: none;
+	}
+}
+
+::-moz-selection {
+	background: #e00d4d;
+	color: #fff;
+	text-shadow: none;
+}
+
+::selection {
+	background: #e00d4d;
+	color: #fff;
+	text-shadow: none;
 }
 
 // Classes
@@ -94,4 +127,80 @@ nav {
 	overflow: hidden;
 	clip: rect(0,0,0,0);
 	border: 0;
+}
+
+.hide {
+	display: none;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.noborder {
+	border: none;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.text-red {
+	color: @brand-red;
+}
+
+.text-blue {
+	color: @brand-blue;
+}
+
+.text-grey {
+	color: @gray;
+}
+
+.text-small {
+	font-size: 90%;
+}
+
+.text-inline {
+	margin: 0;
+}
+
+// Layout
+// ---------------------------------------------------------------------------------------------------------------------
+#page-header {
+	margin: 25px 0;
+}
+
+// Mainmenu
+// ---------------------------------------------------------------------------------------------------------------------
+#mainmenu {
+	&{
+		padding: 25px 0 0 0;
+	}
+
+	li {
+		& {
+			display: inline;
+		}
+
+		> a {
+			float: left;
+			margin: 0 0 0 40px;
+			color: @gray-darker;
+		}
+
+		&:first-child > a {
+			margin: 0;
+		}
+	}
+}
+
+
+
+input[type="submit"], button {
+	&:hover, &:focus, &:active {
+		background-color: @gray-lighter;
+		color: @white;
+		text-decoration: none;
+	}
 }
