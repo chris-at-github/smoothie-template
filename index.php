@@ -38,19 +38,24 @@ $doc->addStyleSheet(TplSmoothieLessHelper::compile('templates/'.$this->template.
 </head>
 <body class="">
 
-	<header id="page-header">
-		<div class="row">
-			<div id="logo" class="col-md-3"><a href="<?php echo $this->baseurl; ?>"><img src="<?php echo $this->baseurl . '/templates/' . $this->template . '/images/logo.png' ?>" alt="" /></a></div>
-			<div id="search" class="col-md-9"><jdoc:include type="modules" name="search" style="container" /></div>
-		</div>
+	<div id="page" class="container">
 
-		<jdoc:include type="modules" name="mainmenu" style="navigation" id="mainmenu" class="clearfix" />
-	</header>
+		<header id="page-header">
+			<div class="row">
+				<div id="logo" class="col-md-3"><a href="<?php echo $this->baseurl; ?>"><img src="<?php echo $this->baseurl . '/templates/' . $this->template . '/images/logo.png' ?>" alt="" /></a></div>
+				<div id="search" class="col-md-9"><jdoc:include type="modules" name="search" style="container" /></div>
+			</div>
 
-	<!-- Begin Content -->
-	<jdoc:include type="message" />
-	<jdoc:include type="component" />
-	<!-- End Content -->
+			<jdoc:include type="modules" name="mainmenu" style="navigation" id="mainmenu" class="clearfix" />
+		</header>
+
+		<!-- Begin Content -->
+		<jdoc:include type="message" />
+		<jdoc:include type="component" />
+		<!-- End Content -->
+
+	</div>
+
 
 	<jdoc:include type="modules" name="debug" style="none" />
 </body>

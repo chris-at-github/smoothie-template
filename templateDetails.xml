@@ -24,6 +24,7 @@
 		<folder>less</folder>
 	</files>
 	<positions>
+		<position>search</position>
 		<position>mainmenu</position>
 		<position>debug</position>
 		<position>footer</position>
