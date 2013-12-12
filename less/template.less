@@ -8,7 +8,8 @@
 
 // Core CSS
 @import "bootstrap/grid.less";
-@import "form.less";
+@import "smoothie/form.less";
+@import "smoothie/nav-dropdown.less";
 
 // Smoothie
 // ---------------------------------------------------------------------------------------------------------------------
@@ -178,19 +179,34 @@ nav {
 		padding: 25px 0 0 0;
 	}
 
-	li {
-		& {
-			display: inline;
+	nav > ul > li {
+		&{
+			margin: 0 0 0 40px;
+		}
+
+		&:first-child {
+			margin: 0;
 		}
 
 		> a {
 			float: left;
-			margin: 0 0 0 40px;
 			color: @gray-darker;
 		}
+	}
 
-		&:first-child > a {
-			margin: 0;
+	nav > ul > li > ul {
+		&{
+			background: @gray-lighter;
+		}
+
+		li {
+			display: inline;
+		}
+
+		a {
+			padding: 3px 10px;
+			display: block;
+			color: @gray-darker;
 		}
 	}
 }

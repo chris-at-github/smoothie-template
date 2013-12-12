@@ -1,0 +1,27 @@
+.nav-dropdown {
+	nav > ul > li {
+		position: relative;
+		float: left;
+	}
+
+	nav > ul > li:hover > ul	{
+		visibility: visible;
+		opacity: 1;
+	}
+
+	ul ul {
+		top: 20px;
+		left: 1px;
+
+		visibility: hidden;
+		position: absolute;
+		z-index: 99999;
+		width: 180px;
+		opacity: 0;
+
+		-webkit-transition:opacity 0.2s linear, visibility 0.2s linear;
+		-moz-transition:opacity 0.2s linear, visibility 0.2s linear;
+		-o-transition:opacity 0.2s linear, visibility 0.2s linear;
+		transition:opacity 0.2s linear, visibility 0.2s linear;
+	}
+}

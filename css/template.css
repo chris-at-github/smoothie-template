@@ -1104,6 +1104,27 @@ button:active {
 .form-checkbox-inline .form-item + .form-item {
 	padding: 0 0 0 10px;
 }
+.nav-dropdown nav > ul > li {
+	position: relative;
+	float: left;
+}
+.nav-dropdown nav > ul > li:hover > ul {
+	visibility: visible;
+	opacity: 1;
+}
+.nav-dropdown ul ul {
+	top: 20px;
+	left: 1px;
+	visibility: hidden;
+	position: absolute;
+	z-index: 99999;
+	width: 180px;
+	opacity: 0;
+	-webkit-transition: opacity 0.2s linear, visibility 0.2s linear;
+	-moz-transition: opacity 0.2s linear, visibility 0.2s linear;
+	-o-transition: opacity 0.2s linear, visibility 0.2s linear;
+	transition: opacity 0.2s linear, visibility 0.2s linear;
+}
 *:before,
 *:after {
 	-webkit-box-sizing: border-box;
@@ -1258,14 +1279,24 @@ nav a:active {
 #mainmenu {
 	padding: 25px 0 0 0;
 }
-#mainmenu li {
-	display: inline;
-}
-#mainmenu li > a {
-	float: left;
+#mainmenu nav > ul > li {
 	margin: 0 0 0 40px;
+}
+#mainmenu nav > ul > li:first-child {
+	margin: 0;
+}
+#mainmenu nav > ul > li > a {
+	float: left;
 	color: #222222;
 }
-#mainmenu li:first-child > a {
-	margin: 0;
+#mainmenu nav > ul > li > ul {
+	background: #eeeeee;
+}
+#mainmenu nav > ul > li > ul li {
+	display: inline;
+}
+#mainmenu nav > ul > li > ul a {
+	padding: 3px 10px;
+	display: block;
+	color: #222222;
 }

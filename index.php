@@ -46,7 +46,7 @@ $doc->addStyleSheet(TplSmoothieLessHelper::compile('templates/'.$this->template.
 				<div id="search" class="col-md-9"><jdoc:include type="modules" name="search" style="container" /></div>
 			</div>
 
-			<jdoc:include type="modules" name="mainmenu" style="navigation" id="mainmenu" class="clearfix" />
+			<jdoc:include type="modules" name="mainmenu" style="navigation" id="mainmenu" class="nav-dropdown" />
 		</header>
 
 		<!-- Begin Content -->
