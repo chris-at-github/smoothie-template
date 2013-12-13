@@ -1290,7 +1290,8 @@ nav a:active {
 	color: #222222;
 }
 #mainmenu nav > ul > li > ul {
-	background: #eeeeee;
+	border: 1px solid #eeeeee;
+	background: #fff;
 }
 #mainmenu nav > ul > li > ul li {
 	display: inline;
@@ -1299,4 +1300,9 @@ nav a:active {
 	padding: 3px 10px;
 	display: block;
 	color: #222222;
+}
+#mainmenu nav > ul > li > ul a:hover,
+#mainmenu nav > ul > li > ul a:focus,
+#mainmenu nav > ul > li > ul a:active {
+	text-decoration: underline;
 }

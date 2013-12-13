@@ -196,7 +196,8 @@ nav {
 
 	nav > ul > li > ul {
 		&{
-			background: @gray-lighter;
+			border: 1px solid @gray-lighter;
+			background: @white;
 		}
 
 		li {
@@ -207,6 +208,10 @@ nav {
 			padding: 3px 10px;
 			display: block;
 			color: @gray-darker;
+		}
+
+		a:hover, a:focus, a:active {
+			text-decoration: underline;
 		}
 	}
 }
