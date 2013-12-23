@@ -19,13 +19,13 @@ $this->direction = $doc->direction;
 
 // Helper registrieren
 JLoader::register('TplSmoothieModuleHelper', JPATH_SITE . '/templates/' . $this->template . '/helpers/module.php');
-JLoader::register('TplSmoothieLessHelper', JPATH_SITE . '/templates/' . $this->template . '/helpers/less.php');
+JLoader::register('TplSmoothieTemplateHelper', JPATH_SITE . '/templates/' . $this->template . '/helpers/template.php');
 
 // Add JavaScript Frameworks
 //JHtml::_('bootstrap.framework');
 
 // Add Stylesheets
-$doc->addStyleSheet(TplSmoothieLessHelper::compile('templates/'.$this->template.'/less/template.less', 'templates/'.$this->template.'/css/template.css'));
+$doc->addStyleSheet(TplSmoothieTemplateHelper::less('templates/' . $this->template . '/less/template.less', 'templates/' . $this->template . '/css/template.css'));
 
 ?>
 <!doctype html>
@@ -38,9 +38,9 @@ $doc->addStyleSheet(TplSmoothieLessHelper::compile('templates/'.$this->template.
 </head>
 <body class="">
 
-	<div id="page" class="container">
+	<div id="page">
 
-		<header id="page-header">
+		<header id="page-header" class="container">
 			<div class="row">
 				<div id="logo" class="col-md-3"><a href="<?php echo $this->baseurl; ?>"><img src="<?php echo $this->baseurl . '/templates/' . $this->template . '/images/logo.png' ?>" alt="" /></a></div>
 				<div id="search" class="col-md-9"><jdoc:include type="modules" name="search" style="container" /></div>
@@ -50,9 +50,19 @@ $doc->addStyleSheet(TplSmoothieLessHelper::compile('templates/'.$this->template.
 		</header>
 
 		<!-- Begin Content -->
-		<jdoc:include type="message" />
-		<jdoc:include type="component" />
+		<div id="page-body" class="container">
+			<jdoc:include type="message" />
+			<jdoc:include type="component" />
+		</div>
 		<!-- End Content -->
+
+		<footer id="page-footer">
+			<div id="footer-menu-outer">
+				<jdoc:include type="modules" name="footermenu" style="navigation" id="footer-menu" class="container" />
+			</div>
+
+			<jdoc:include type="modules" name="copyright" style="container" id="copyright" class="container" />
+		</footer>
 
 	</div>
 

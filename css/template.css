@@ -245,8 +245,6 @@ table {
 .container {
 	margin-right: auto;
 	margin-left: auto;
-	padding-left: 15px;
-	padding-right: 15px;
 }
 .container:before,
 .container:after {
@@ -919,6 +917,41 @@ table {
 		margin-left: 0%;
 	}
 }
+@font-face {
+	font-family: 'smoothie';
+	src: url('../fonts/smoothie.eot?91795284');
+	src: url('../fonts/smoothie.eot?91795284#iefix') format('embedded-opentype'), url('../fonts/smoothie.woff?91795284') format('woff'), url('../fonts/smoothie.ttf?91795284') format('truetype'), url('../fonts/smoothie.svg?91795284#smoothie') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+	font-family: "smoothie";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: .2em;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+	margin-left: .2em;
+}
+.icon-arrow-down:before {
+	content: '\e801';
+}
+.icon-arrow-left:before {
+	content: '\e800';
+}
+.icon-arrow-right:before {
+	content: '\e802';
+}
+.icon-arrow-up:before {
+	content: '\e803';
+}
 input[type="text"],
 input[type="password"],
 textarea {
@@ -1274,7 +1307,7 @@ nav a:active {
 	margin: 0;
 }
 #page-header {
-	margin: 25px 0;
+	padding: 25px 0;
 }
 #mainmenu {
 	padding: 25px 0 0 0;
@@ -1288,6 +1321,20 @@ nav a:active {
 #mainmenu nav > ul > li > a {
 	float: left;
 	color: #222222;
+}
+#mainmenu nav > ul > li.parent > a {
+	position: relative;
+	padding: 0 15px 0 0;
+}
+#mainmenu nav > ul > li.parent > a:before {
+	position: absolute;
+	top: 2px;
+	right: 0;
+	content: "\e801";
+	display: inline-block;
+	font-family: "smoothie";
+	font-size: 14px;
+	color: #555555;
 }
 #mainmenu nav > ul > li > ul {
 	border: 1px solid #eeeeee;
@@ -1304,5 +1351,30 @@ nav a:active {
 #mainmenu nav > ul > li > ul a:hover,
 #mainmenu nav > ul > li > ul a:focus,
 #mainmenu nav > ul > li > ul a:active {
+	text-decoration: underline;
+}
+#footer-menu-outer {
+	background: #d90f00;
+}
+#footer-menu ul {
+	padding: 5px 0;
+}
+#footer-menu li {
+	display: inline;
+}
+#footer-menu a {
+	float: left;
+	padding: 0 15px;
+	border-left: 1px solid #fff;
+	color: #fff;
+	line-height: 1;
+}
+#footer-menu li:first-child a {
+	padding: 0 15px 0 0;
+	border: 0;
+}
+#footer-menu a:hover,
+#footer-menu a:focus,
+#footer-menu a:active {
 	text-decoration: underline;
 }

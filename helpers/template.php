@@ -10,10 +10,29 @@
 // No direct access.
 defined('_JEXEC') or die();
 
-// Klasse JBrowser importieren
-jimport('joomla.environment.browser');
+abstract class TplSmoothieTemplateHelper {
+	
+	public static function less($in, $out) {
+		$application = JFactory::getApplication();
 
-abstract class TplPlainTemplateHelper {
+		// Load the RAD layer to use its LESS compiler
+		if(!defined('FOF_INCLUDED')) {
+			require_once JPATH_LIBRARIES . '/fof/include.php';
+		}
+
+		$less = new FOFLess;
+		$less->setFormatter(new FOFLessFormatterJoomla);
+
+		try {
+			$less->compileFile($in, $out);
+			
+		}	catch(Exception $e) {
+			$application->enqueueMessage($e->getMessage(), 'error');
+		}
+		
+		return $out;
+	}
+	
 	public static function browserCssClass() {
 		$cssClass	= array();
 		$browser	= JBrowser::getInstance();
@@ -37,7 +56,7 @@ abstract class TplPlainTemplateHelper {
 		$application	= JFactory::getApplication();
 
 		$pagetitle	= $document->title;
-		$pagetitle	= str_replace($application->getCfg('sitename'), '', $pagetitle);
+		$pagetitle	= str_replace($application->get('sitename'), '', $pagetitle);
 		$cssClass		= JFilterOutput::stringURLSafe($pagetitle);
 
 		// Klasse aus der Page Class
