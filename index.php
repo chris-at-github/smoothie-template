@@ -49,6 +49,12 @@ $doc->addStyleSheet(TplSmoothieTemplateHelper::less('templates/' . $this->templa
 			<jdoc:include type="modules" name="mainmenu" style="navigation" id="mainmenu" class="nav-dropdown" />
 		</header>
 
+		<?php if($this->countModules('slider')) { ?>
+			<div id="slider">
+				<jdoc:include type="modules" name="slider" style="none" />
+			</div>
+		<?php } ?>
+
 		<!-- Begin Content -->
 		<div id="page-body" class="container">
 			<jdoc:include type="message" />

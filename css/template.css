@@ -1011,7 +1011,7 @@ select.form-field-error {
 	font-weight: normal;
 }
 .form-required {
-	color: #d90f00;
+	color: #fe4e5b;
 }
 .form-field {
 	position: relative;
@@ -1057,12 +1057,12 @@ button:active {
 	text-decoration: none;
 }
 .button-submit {
-	background-color: #d90f00;
+	background-color: #fe4e5b;
 	color: #fff;
 }
 .button-submit:hover,
 .button-submit:focus {
-	background-color: #8d0a00;
+	background-color: #fe0215;
 }
 .button-small {
 	padding: 5px 9px;
@@ -1083,7 +1083,7 @@ button:active {
 }
 .button-icon:hover,
 .button-icon:focus {
-	background-color: #8d0a00;
+	background-color: #fe0215;
 }
 .form-inline input,
 .form-inline textarea,
@@ -1213,12 +1213,12 @@ h2,
 	margin: 0 0 10px 0;
 }
 a {
-	color: #428bca;
+	color: #0091c8;
 	text-decoration: none;
 }
 a:hover,
 a:focus {
-	color: #2a6496;
+	color: #005a7c;
 	text-decoration: underline;
 }
 a:focus {
@@ -1292,10 +1292,10 @@ nav a:active {
 	white-space: nowrap;
 }
 .text-red {
-	color: #d90f00;
+	color: #fe4e5b;
 }
 .text-blue {
-	color: #428bca;
+	color: #0091c8;
 }
 .text-grey {
 	color: #555555;
@@ -1354,7 +1354,7 @@ nav a:active {
 	text-decoration: underline;
 }
 #footer-menu-outer {
-	background: #d90f00;
+	background: #fe4e5b;
 }
 #footer-menu ul {
 	padding: 5px 0;

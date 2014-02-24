@@ -26,6 +26,7 @@
 	<positions>
 		<position>search</position>
 		<position>mainmenu</position>
+		<position>slider</position>
 		<position>debug</position>
 		<position>footer</position>
 		<position>footermenu</position>
